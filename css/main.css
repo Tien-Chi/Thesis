@@ -20,7 +20,7 @@ header {
     z-index: 1000;
     margin: 0 10px;
     height: 40px;
-    background-color: #329A04;
+    background-color: red;
 }
 
 
@@ -123,7 +123,7 @@ footer {
     position: relative;
     top: 0px;
     margin: 80px 10px 10px 10px;
-    background-color: #99111B;
+    background-color: red;
 }
 
 footer #copyright {
@@ -201,7 +201,7 @@ html[xmlns] .clearfix {
     margin: 0;
     padding: 20px;
     width: 20%;
-    color: blue;
+    color: #282828;
     text-align: left;
 }
 
