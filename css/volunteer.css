@@ -1,0 +1,183 @@
+.main {
+    position: relative;
+    top: -3px;
+    z-index: 80;
+    width: 100%;
+}
+
+#page {
+    margin: 0 10px;
+}
+
+#ticketsHeader {
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+#ticketsHeader img {
+    position: relative;
+    -webkit-left: 90%;
+    left: 90%;
+    -webkit-transform: translate(-90%, 0);
+    transform: translate(-90%, 0);
+}
+
+.captionBkgd {
+    position: relative;
+    bottom: 95px;
+    margin: 0;
+    height: 90px;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.captionText {
+    position: relative;
+    bottom: 165px;
+    margin: 0 10px;
+    font-size: 3em;
+    line-height: 0.50em;
+    color: white;
+}
+
+.captionText span {
+    font-size: .45em;
+    font-weight: 300;
+}
+
+#contentBox {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.volunteerInfo {
+    margin: 0;
+    font-weight: 300;
+}
+
+.volunteerInfo #header {
+    text-align: center;
+}
+
+.volunteerInfo #header h1{
+    font-size: 3em;
+}
+
+.volunteerInfo #header h3{
+    font-size: 2em;
+}
+
+.volunteerInfo #body{
+    margin-top: 20px;
+}
+
+.volunteerInfo #body p {
+    margin-top: 10px;
+    line-height: 1.2em;
+}
+
+.volunteerInfo h1, h3, h4{
+    color: #9E0A0E;
+}
+
+.volunteerInfo a {
+    color: green;
+}
+
+.volunteerInfo #requirements{
+    margin: 20px 20px 0 20px;
+}
+
+.volunteerInfo li {
+    margin: 10px 40px
+}
+
+#buttons {
+    margin-top: 30px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    margin: 10px auto;
+    width: 40%;
+    background-color: green;
+    background-color: #88BA09;
+    border-radius: 30px;
+    border: 2px solid #5E8406;
+    text-align: center;
+    line-height: 25px;
+}
+
+#buttons a {
+    text-decoration: none;
+    color: #FFFFA2;
+    font-weight: 300;
+}
+
+footer {
+    top: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F5D30C;
+}
+
+a:active {
+    color: #F5E83F;
+}
+
+/******************************************************/
+/*****                 Forms                          */
+/******************************************************/
+form #personal h2,
+form #personal h3, form #personalAdd h2,
+form #personalAdd h3{
+    display: inline-block;
+}
+
+form #personal h2, form #personalAdd h2{
+    font-size: 1.2em;
+}
+
+form #personal h3,
+form #personalAdd #ageRequired{
+    vertical-align: top;
+    padding-left: 0.25em;
+    font-size: 1em;
+}
+
+form div, form fieldset{
+    margin: 10px;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+form #personal input{
+    width: 90%;
+}
+
+form #times input{
+    margin-top: 10px;
+}
+
+form #submit {
+    width: 100%;
+    text-align: center;
+}
+
+form fieldset legend{
+    font-size: 1.5em;
+}
+

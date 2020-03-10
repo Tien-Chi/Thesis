@@ -1,0 +1,228 @@
+body {
+    margin: 20px auto;
+    max-width: 960px;
+    font-family: 'Oswald', sans-serif;
+}
+
+p {
+    margin: 0px;
+    line-height: 85%;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    top: 80px;
+    z-index: 1000;
+    margin: 0 10px;
+    height: 40px;
+    background-color: #329A04;
+}
+
+
+.logo {
+    position: absolute;
+    top: -80px;
+    z-index: 100;
+    width: 23.958333333333%;
+    height: 0;
+    margin: -10px 0;
+    float: left;
+}
+
+.logo img {
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+nav {
+    margin: 0 auto;
+    height: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    width: 76.041666666667%;
+    line-height: 40px;
+    text-align: center;
+    float: right;
+    
+}
+
+nav li {
+    margin: 0 2%;
+    padding: 0;
+    font-size: 1.1em;
+    font-weight: 300;
+    display: inline-block;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: white;
+}
+
+nav li a:active {
+    color:#F5E83F;;
+}
+
+.menuLink{
+    margin: 10px;
+    color: #F5D30C;
+}
+
+#home #home, 
+#firstLink #firstLink, 
+#secondLink #secondLink, 
+#thirdLink #thirdLink,
+#fourthLink #fourthLink{
+    color: white;
+}
+
+.stretch {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+}
+
+#story {
+    margin: 80px 0 0 0;
+    padding: 10px;
+}
+
+#story p {
+    padding: 0 10px 20px 0;
+    line-height: 1.5em;
+}
+
+#contentBox {
+    /*position: relative;
+    top: 80px;*/
+}
+
+#main {
+    position: relative;
+    top: 90px;
+}
+
+#secondLink #main{
+    text-align: center;
+}
+
+footer {
+    position: relative;
+    top: 0px;
+    margin: 80px 10px 10px 10px;
+    background-color: #99111B;
+}
+
+footer #copyright {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: white;
+}
+
+footer li {
+    padding: 0 10px 5px 10px;
+    display: inline-block;
+}
+
+footer #footerNav {
+    text-align: center;
+}
+
+#footerNav li a {
+    text-decoration: none;
+}
+
+#footerNav li a:hover {
+    color: #E99FA4;
+}
+
+#footerNav li a:active {
+    color:black;
+}
+
+#footerNav li {
+    color: black;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
+}
+
+
+#footerNav a {
+    color: white;
+    text-decoration: none;
+}
+
+#footerNav a:hover {
+    color: white;
+}
+
+#footerNav a:active {
+    color: green;
+}
+
+#infoBlock{
+    display: inline-block;
+    padding: 20px;
+}
+
+.output {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    color: blue;
+    text-align: left;
+}
+
+#tableStructure {
+    text-align: left;
+    color: blueviolet;
+}
+
+footer {
+    top: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F5D30C;
+}
+
+a:active {
+    color: #F5E83F;
+}
