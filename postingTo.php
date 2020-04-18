@@ -26,28 +26,12 @@
                                         <h3>*required</h3><input type="text" name="name" placeholder="Title of Playlist">
                                         <h2>Created by: </h2><input type="text" name="author" placeholder="Name">
                                         <h2>Tags: &nbsp;</h2>
-                                        <h3>*required</h3><input type="text" name="tags" placeholder="#Tags">
+                                        <input type="text" name="tags" placeholder="#Tags">
+                                        <h2>Description:</h2>
+                                        <input type="text" name="info" placeholder="">
 
                                     </fieldset>
-                                    <!-- end of Personal -->
-
-
-
-                                    <fieldset id="videos">
-                                        <legend>Video URLs</legend>
-                                        <h2>Video #1: </h2>
-                                        <h3>*required</h3><input type="text" name="vid1" placeholder="URL link">
-                                        <h2>Video #2: </h2>
-                                        <input type="text" name="vid2" placeholder="URL link">
-                                        <h2>Video #3: </h2>
-                                        <input type="text" name="vid3" placeholder="URL link">
-                                        <h2>Video #4: </h2>
-                                        <input type="text" name="vid4" placeholder="URL link">
-                                        <h2>Video #5: </h2>
-                                        <input type="text" name="vid5" placeholder="URL link">
-                                        
-                                    </fieldset>
-                                    <!-- end of times -->
+                               <!-- end of times -->
                                     <fieldset id="sharing">
                                         <legend>Visability</legend>
                                         <input type="radio"> Public<br>
@@ -76,14 +60,14 @@
 <?php 
     if($_POST){
         //echo "<script> alert('post is being called');</script>";
-        $insert_data = "INSERT INTO playlist (name, author, tags, vid1, vid2, vid3, vid4, vid5) VALUES ('$_POST[name]','$_POST[author]','$_POST[tags]','$_POST[vid1]','$_POST[vid2]','$_POST[vid3]','$_POST[vid4]','$_POST[vid5]')";
+        $insert_data = "INSERT INTO createlist (name, author, tags, info) VALUES ('$_POST[name]','$_POST[author]','$_POST[tags]','$_POST[info]')";
             
         $run = mysqli_query($conn, $insert_data);
 
         if($run){
-            echo "<script> alert('Data sent successfully');</script>";
+            echo "<script> alert('Playlist successfully created');</script>";
         }else{
-            echo "<script> alert('ERROR: Data NOT sent');</script>";
+            echo "<script> alert('ERROR: Playlist failed to be created');</script>";
         };
             
     };

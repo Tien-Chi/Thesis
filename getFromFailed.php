@@ -50,6 +50,38 @@
                                 
                                 
                             };
+        if(mysqli_num_rows($result)>0){
+                                    while($row = mysqli_fetch_assoc($result))
+                                        echo "<div id='infoBlock'>
+                                            <div class='output'>
+                                            <h2>".$row['name']."</h2>
+                                            <br>Created by: ".$row['author']."
+                                            <br>Tags: ".$row['tags']."
+                                            </div><br>
+                                        </div>
+                                        
+                                        
+                                        ";
+
+									
+                                        
+                             
+                                    
+                                };
+                            
+                                                
+                        ?>
+                        <div id="tableOutput">
+                                <div id="submit">
+                                        <br>
+                                        <input type="submit" name="search" placeholder="Search">
+                                        <br>
+                                        <br>
+                                    </div>
+                                                                                
+                            <?php 
+                                
+                            
                             if(isset($_POST['search'])){
                                 $pullData = "SELECT * FROM videos WHERE playlistID = 1";
                                 //Faking this... 1 should be the ID of the playlist get from the createlist table
@@ -64,33 +96,14 @@
                                 
                                 
                             };
-                                                
-                        ?>
-                        <div id="tableOutput">
-                        
-                            <?php 
-                                if(mysqli_num_rows($result)>0){
+                            if(mysqli_num_rows($result)>0){
                                     while($row = mysqli_fetch_assoc($result))
-                                        echo "<div id='infoBlock'>
-                                            <div class='output'>
-                                            <h2>".$row['name']."</h2>
-                                            <br>Created by: ".$row['author']."
-                                            <br>Tags: ".$row['comment']."
-                                            </div><br>
-                                        </div>
-                                        
-                                        <iframe width=\"560\" height=\"315\" src=".$row['video'].'?start='.$row['time']." frameborder=\"100\" allowfullscreen></iframe>
-                                        ";
-
-									
-                                        
-                             
-                                    
-                                };
+                                        echo "<iframe width=\"560\" height=\"315\" src=".$row['video'].'?start='.$row['time']." frameborder=\"100\" allowfullscreen></iframe>";
                             ?>
                         </div>
                     </section>
-                </div><!-- end of contentBox -->
+                </div><!-- end of contentBox 
+-->
             </article><!-- end of page -->
         </section><!-- end of main -->
         <?php include "footer.php" ?>

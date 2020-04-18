@@ -11,13 +11,13 @@
                 <a class="menuLink" id="firstLink" href="postingTo.php">Create Playlist</a>
             </li>
             <li>
-                <a class="menuLink" id="secondLink" href="getFrom.php">Featured Playlists</a>
+                <a class="menuLink" id="secondLink" href="getFrom.php">Browse Playlists</a>
             </li>
             <li>
-                <a class="menuLink" id="thirdLink" href="#">Subcriptions</a>
+                <a class="menuLink" id="thirdLink" href="addTo.php">Add Videos</a>
             </li>
             <li>
-                <a class="menuLink" id="fourthLink" href="#">My PLaylists</a>
+                <a class="menuLink" id="fourthLink" href="#">About</a>
             </li>
         </ul>
     </nav>
