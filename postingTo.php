@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Posting Data to Your Database</title>
+        <title>TimTube: Create Playlist</title>
         <meta charset="utf-8">
         <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/final.css">
         <link rel="stylesheet" href="css/volunteer.css">
 
         <meta name="viewport" content="width=device-width"><!-- activates the @media calls -->

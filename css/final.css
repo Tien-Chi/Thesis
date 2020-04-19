@@ -10,6 +10,7 @@ p {
 }
 
 h1, h2, h3, h4 {
+    color: #ffa10b;
     margin: 0;
     padding: 0;
 }
@@ -26,18 +27,17 @@ header {
 
 .logo {
     position: absolute;
-    top: -80px;
+    top: -95px;
     z-index: 100;
     width: 23.958333333333%;
     height: 0;
-    margin: -10px 0;
+    margin: -10px;
     float: left;
 }
 
 .logo img {
     margin: 0;
     padding: 0;
-    width: 60%;
 }
 nav {
     margin: 0 auto;
@@ -71,8 +71,14 @@ nav li a:hover {
 }
 
 nav li a:active {
-    color:#F5E83F;;
+    color:#F5E83F;
 }
+
+input {
+    color: red;
+}
+
+
 
 .menuLink{
     margin: 10px;
@@ -203,6 +209,7 @@ html[xmlns] .clearfix {
     width: 20%;
     color: #282828;
     text-align: left;
+    float: left;
 }
 
 #tableStructure {

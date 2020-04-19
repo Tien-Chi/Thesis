@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>Pulling Data from Your Database</title>
+    <title>TimTube: Your Playlists</title>
     <meta charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/final.css">
     <link rel="stylesheet" href="css/volunteer.css">
 
     <meta name="viewport" content="width=device-width"><!-- activates the @media calls -->
@@ -26,13 +26,12 @@
                         <form action="" method="post">
                             <div id="submit">
                                 <br>
-                                <input type="text" name="search" placeholder="Search">
+                                <input type="text" name="search" placeholder="Search for playlists">
                                 <button type="submit" name="submit-search">Search</button>
                                 <br>
                                 <br>
                             </div><!-- end of submit -->
                         </form>
-                        <!-- end of submit -->
                         <?php include_once "config.php" ?>
                         
                         <?php 
@@ -46,13 +45,17 @@
                                 }else{
                                     echo "<script> alert('Failed to get Data');</script>";
                                 };
-                                echo mysqli_num_rows($result)." entries.<br><br>";
+                                    echo "  <div id='infoBlock'>
+                                            <h2>Thesis Playlist</h2>
+                                            <br>Created by: Tim
+                                            <br>Tags: #Youtube #Smarter <br>
+                                            <div>";
                                 
                                 
                             };
                             if(isset($_POST['search'])){
                                 $pullData = "SELECT * FROM videos WHERE playlistID = 1";
-                                //Faking this... 1 should be the ID of the playlist get from the createlist table
+                                //Faking this... 1 should be the ID of the playlist get from the createlist table (don't know how to do this)
                                 $result = mysqli_query($conn, $pullData);
                                 
                                 if($result){
@@ -60,7 +63,7 @@
                                 }else{
                                     echo "<script> alert('Failed to get Data');</script>";
                                 };
-                                echo mysqli_num_rows($result)." entries.<br><br>";
+                                //echo mysqli_num_rows($result)." entries.<br><br>";
                                 
                                 
                             };
@@ -70,22 +73,18 @@
                         
                             <?php 
                                 if(mysqli_num_rows($result)>0){
+                                    
                                     while($row = mysqli_fetch_assoc($result))
-                                        echo "<div id='infoBlock'>
-                                            <div class='output'>
+                                        echo "
+                                        <iframe width=\"560\" height=\"315\" src=".$row['video'].'?start='.$row['time']." frameborder=\"100\" allowfullscreen></iframe>
+                                        ";
+                                        /*echo "<div id='infoBlock'>
                                             <h2>".$row['name']."</h2>
                                             <br>Created by: ".$row['author']."
                                             <br>Tags: ".$row['comment']."
                                             </div><br>
-                                        </div>
-                                        
                                         <iframe width=\"560\" height=\"315\" src=".$row['video'].'?start='.$row['time']." frameborder=\"100\" allowfullscreen></iframe>
-                                        ";
-
-									
-                                        
-                             
-                                    
+                                        ";*/
                                 };
                             ?>
                         </div>

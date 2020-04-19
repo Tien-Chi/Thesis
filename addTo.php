@@ -2,14 +2,15 @@
 <html>
 
 <head>
-    <title>Pulling Data from Your Database</title>
+    <title>TimTube: Add Video</title>
     <meta charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/final.css">
     <link rel="stylesheet" href="css/volunteer.css">
 
-    <meta name="viewport" content="width=device-width"><!-- activates the @media calls -->
+    <meta name="viewport" content="width=device-width">
+    <!-- activates the @media calls -->
     <link href='http://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
 </head>
 
@@ -23,71 +24,62 @@
                 <div class="clearfix" id="contentBox">
                     <section>
                         <span class="stretch"></span>
-                        <!-- end of submit -->
+                        <h1>Your Playlists</h1>
                         <?php include_once "config.php" ?>
-                        
+
                         <?php 
-                            
                                 $pullData = "SELECT * FROM createlist";
-                                
                                 $result = mysqli_query($conn, $pullData);
                                 
                                 if($result){
-                                    
                                 }else{
                                     echo "<script> alert('Failed to get Data');</script>";
                                 };
-                                                          
-                                                                                                     
                         ?>
                         <div id="tableOutput">
-                        
                             <?php 
                                 if(mysqli_num_rows($result)>0){
                                     while($row = mysqli_fetch_assoc($result))
-                                        echo "<div id='infoBlock'>
-                                            <div class='output'>
-                                            
+                                        echo "<div class='output'>
                                             Playlist #".$row['ID'].":
                                             <br>".$row['name']."
                                             </div>
-                                        </div>";
-
-									
-                                        
-                             
+                                            ";
                                     
                                 };
                             ?>
-                        <form action="" method="post">
+                            <form action="" method="post">
 
-                                    <fieldset id="videos">
-                                        <legend>Add a video</legend>
-                                        <h2>Playlist #: </h2>
-                                        <h3>*required</h3><input type="text" name="id" placeholder="Type the # of the platlist to add to">
-                                        <h2>Video URL: </h2>
-                                        <h3>*required</h3><input type="text" name="video" placeholder="URL link">
-                                        <h2>Timestamp: </h2>
-                                        <input type="text" name="time" placeholder="starting timestamp">
-                                        <h2>Tags: </h2>
-                                        <input type="text" name="comment" placeholder="tags">
+                                <fieldset id="personal">
+                                    <legend>Add a video to playlist</legend>
+                                    <h2>Playlist #: </h2>
+                                    <h3>*required</h3><input type="text" name="id" placeholder="Type the # of the platlist to add to">
+                                    <h2>Video URL: </h2>
+                                    <h3>*required</h3><input type="text" name="video" placeholder="Embed URL link">
+                                    <h2>Timestamp: </h2>
+                                    <input type="text" name="time" placeholder="add starting timestamp">
+                                    <h2>Tags: </h2>
+                                    <input type="text" name="comment" placeholder="#tags">
 
-                                        
-                                    </fieldset>
 
-                                    <!-- end of personalAdd -->
-                                    <div id="submit">
-                                        <br>
-                                        <input type="submit" name="sub" value="Add Video">
-                                        <br>
-                                        <br>
-                                    </div>
+                                </fieldset>
+
+                                <!-- end of personalAdd -->
+                                <div id="submit">
+                                    <br>
+                                    <input type="submit" name="sub" value="Add Video">
+                                    <br>
+                                    <br>
+                                </div>
                             </form>
                         </div>
                     </section>
-                </div><!-- end of contentBox -->
-            </article><!-- end of page -->
-        </section><!-- end of main -->
+                </div>
+                <!-- end of contentBox -->
+            </article>
+            <!-- end of page -->
+        </section>
+        <!-- end of main -->
         <?php include "footer.php" ?>
     </div>
 </body>
