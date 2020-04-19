@@ -43,6 +43,7 @@
                                         echo "<div class='output'>
                                             Playlist #".$row['ID'].":
                                             <br>".$row['name']."
+                                            <br>".$row['info']."
                                             </div>
                                             ";
                                     
@@ -93,7 +94,7 @@
         $run = mysqli_query($conn, $insert_data);
 
         if($run){
-            echo "<script> alert('Data sent successfully');</script>";
+            echo "<script> alert('Video added to playlist');</script>";
         }else{
             echo "<script> alert('ERROR: Data NOT sent');</script>";
         };
